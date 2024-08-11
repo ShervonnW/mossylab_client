@@ -1,0 +1,119 @@
+/* TerrariumsPage.css */
+.terrariums-page {
+    text-align: center;
+    padding: 20px;
+    margin-top: 80px;
+}
+
+.terrariums-page h1 {
+    font-family: "Lucida Handwriting";
+    font-size: 3rem;
+    text-align: center;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.intro-text {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.content-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.text-box {
+    max-width: 35%;
+    padding: 20px;
+    border: 1px solid #323232;
+    border-radius: 10px;
+    background-color: #eefae8;
+    text-align: left;
+}
+
+.text-box h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.text-box p {
+    font-size: 1.24rem;
+    margin-bottom: 10px;
+}
+
+.image-container {
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.steps-image {
+    width: 100%;
+    height: auto;
+    border: 1px solid #bce1c0;
+    border-radius: 10px;
+    padding: 1px;
+}
+
+.gifs-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+.gifs-image{
+    width: 42%;
+    height: auto;
+}
+
+/* Media query for responsive design */
+@media (max-width: 768px) {
+    .terrariums-page h1 {
+        font-size: 2rem; /* 调整手机上的字体大小 */
+    }
+
+    .content-container {
+        flex-direction: column; /* 手机上垂直排列内容 */
+        gap: 20px; /* 调整手机上的间距 */
+    }
+
+    .text-box {
+        max-width: 100%; /* 手机上全宽度 */
+        padding: 10px; /* 调整手机上的内边距 */
+        margin-bottom: 20px; /* 增加底部间距 */
+    }
+
+    .text-box h2 {
+        font-size: 1.25rem; /* 调整手机上的字体大小 */
+    }
+
+    .text-box p {
+        font-size: 1rem; /* 调整手机上的字体大小 */
+    }
+
+    .image-container {
+        max-width: 100%; /* 手机上全宽度 */
+    }
+
+    .steps-image, .gifs-image {
+        width: 100%; /* 手机上全宽度 */
+    }
+
+    .gifs-image-container {
+        flex-direction: column; /* 手机上垂直排列内容 */
+    }
+
+    .gifs-image {
+        width: 80%; /* 调整手机上的宽度 */
+        margin-bottom: 20px; /* 增加底部间距 */
+    }
+}

@@ -1,0 +1,93 @@
+.footer {
+  background-color: #2F4F4F;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 10px; /* Reduce margin */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer-section h2, .footer-section h3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 5px; /* Reduce margin */
+  font-size: 1.25rem; /* Reduce font size */
+}
+
+.footer-section p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 5px; /* Reduce margin */
+  font-size: 0.875rem; /* Reduce font size */
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social-icon {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.footer-section.newsletter form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+  background-color: transparent; /* Remove background color */
+  box-shadow: none; /* Remove any box-shadow */
+  border: none; /* Remove any border */
+}
+
+.footer-section.newsletter input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 8px; /* Reduce padding */
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 8px; /* Reduce margin */
+  width: 80%;
+  max-width: 300px;
+}
+
+.footer-section.newsletter button {
+  padding: 8px 10px; /* Reduce padding */
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+.footer-bottom {
+  font-size: 0.75rem; /* Reduce font size */
+}
+
+.footerlogo {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 2.5rem; /* Reduce font size */
+  color: #ffffff;
+}

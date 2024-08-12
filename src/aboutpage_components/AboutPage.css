@@ -2,7 +2,7 @@
 .about-page {
   font-family: Arial, sans-serif;
   padding: 20px;
-  padding-top: 80px; /* Add padding at the top to avoid overlap with the header */
+  margin-top: 80px; /* 增加边距以避免与Header重叠 */
   color: #333;
 }
 
@@ -18,7 +18,7 @@
 
 .about-intro h1 {
   font-family: "Lucida Handwriting", cursive;
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 20px;
 }
 
@@ -28,24 +28,33 @@
   margin: 0 auto;
 }
 
-.vision-mission {
-  background-color: rgba(162, 237, 182, 0.8);
+.vision-mission-container {
   display: flex;
-  justify-content: space-around;
-  margin-bottom: 40px;
+  justify-content: center;
+  gap: 20px;
   flex-wrap: wrap; /* Add this line to wrap items on smaller screens */
+  margin-bottom: 100px;
+  margin-top: 50px;
 }
 
 .vision, .mission {
-  flex: 1;
-  margin: 0 20px;
-  text-align: center;
-  min-width: 300px; /* Add this line to ensure minimum width */
+  background-color: #e4f0e2; /* 背景色 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+  border-radius: 10px; /* 圆角 */
+  border-color: black;
+  border-style: dotted;
+  border-width: 0.5ch;
+  padding: 20px;
+  text-align: left;
+  max-width: 500px;
+  width: 100%;
+  margin-bottom: 20px; /* 添加底部间距 */
 }
 
 .vision h2, .mission h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
+  text-align: center; /* 将 h2 居中 */
+  font-size: 1.5rem;
+  margin-bottom: 10px;
 }
 
 .vision p, .mission p {

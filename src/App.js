@@ -6,6 +6,7 @@ import AboutPage from './pages/AboutPage';
 import GalleryPage from './pages/GalleryPage';
 import TerrariumsPage from './pages/TerrariumsPage';
 import ContactPage from './pages/ContactPage';
+import WorkshopsPage from './pages/WorkshopsPage';
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/terrariums" element={<TerrariumsPage />} />
           <Route path="/contact" element={<ContactPage/>} />
+          <Route path="/workshops" element={<WorkshopsPage />} /> 
         </Routes>
       </div>
     </Router>

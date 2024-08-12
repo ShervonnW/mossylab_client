@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "https://mossylab.shop",
-  "proxy": "http://localhost:5000",
+  "proxy": "https://floating-crag-73026-d9a5898f632f.herokuapp.com/",
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.14.5",
     "@testing-library/jest-dom": "^5.17.0",

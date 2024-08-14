@@ -9,7 +9,7 @@ const HeroSection = () => {
             <div className="hero-content">
                 <h1>Experience Nature's Tranquility Indoors</h1>
                 <p>Mossy Lab offers creative and relaxing DIY workshops for nature enthusiasts and craft lovers.</p>
-                <Link to="/contact">
+                <Link to="/workshops">
                   <button className="btn btn-primary">Join us for a Workshop!</button>
                 </Link>
             </div>

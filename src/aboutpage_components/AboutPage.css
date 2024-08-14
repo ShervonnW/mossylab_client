@@ -1,8 +1,7 @@
-/* AboutPage.css */
 .about-page {
   font-family: Arial, sans-serif;
   padding: 20px;
-  margin-top: 80px; /* 增加边距以避免与Header重叠 */
+  margin-top: 80px;
   color: #333;
 }
 
@@ -32,15 +31,37 @@
   display: flex;
   justify-content: center;
   gap: 20px;
-  flex-wrap: wrap; /* Add this line to wrap items on smaller screens */
+  flex-wrap: wrap;
   margin-bottom: 100px;
   margin-top: 50px;
 }
 
-.vision, .mission {
-  background-color: #e4f0e2; /* 背景色 */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+.why {
+  font-size: 1.25rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+  padding: 30px; /* 增加内边距 */
   border-radius: 10px; /* 圆角 */
+  margin-bottom: 50px; /* 增加底部间距 */
+}
+
+.why h2 {
+  font-size: 1.75rem; /* 增大字体大小 */
+  margin-bottom: 20px;
+  text-align: center; /* 标题居中 */
+  color: #2c3e50; /* 更改标题颜色 */
+}
+
+.why li {
+  margin-bottom: 10px; /* 增加列表项之间的间距 */
+  line-height: 1.6; /* 增加行高 */
+}
+
+.vision, .mission {
+  background-color: #e4f0e2;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
   border-color: black;
   border-style: dotted;
   border-width: 0.5ch;
@@ -48,13 +69,13 @@
   text-align: left;
   max-width: 500px;
   width: 100%;
-  margin-bottom: 20px; /* 添加底部间距 */
+  margin-bottom: 20px;
 }
 
 .vision h2, .mission h2 {
-  text-align: center; /* 将 h2 居中 */
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
 }
 
 .vision p, .mission p {
@@ -62,7 +83,7 @@
   line-height: 1.6;
 }
 
-.team {
+/* .team {
   text-align: center;
   margin-bottom: 40px;
 }
@@ -76,12 +97,12 @@
   display: flex;
   justify-content: center;
   gap: 20px;
-  flex-wrap: wrap; /* Add this line to wrap items on smaller screens */
+  flex-wrap: wrap;
 }
 
 .team-member {
   text-align: center;
-  margin: 10px; /* Add this line to add margin around team members */
+  margin: 10px;
 }
 
 .team-member img {
@@ -99,43 +120,92 @@
 .team-member p {
   font-size: 1rem;
   color: #777;
+} */
+
+/* Styles for the "What We Believe In" section */
+.beliefs-section {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.beliefs-section h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.beliefs-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.belief-card {
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: left;
+  padding: 20px;
+  max-width: 300px;
+  width: 100%;
+}
+
+.belief-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.belief-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.belief-card p {
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 /* Media query for responsive design */
 @media (max-width: 768px) {
   .about-intro h1 {
-    font-size: 2rem; /* Adjust font size for mobile */
+    font-size: 2rem;
   }
 
   .about-intro p {
-    font-size: 1rem; /* Adjust font size for mobile */
+    font-size: 1rem;
   }
 
   .vision, .mission {
-    margin: 20px 0; /* Add margin for mobile */
-    flex-basis: 100%; /* Make each section full width on mobile */
+    margin: 20px 0;
+    flex-basis: 100%;
   }
 
   .team-members {
-    flex-wrap: wrap; /* Ensure flex items wrap */
-    justify-content: space-around; /* Center the items */
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
 
   .team-member {
-    flex-basis: calc(25% - 20px); /* Four items per row */
+    flex-basis: calc(25% - 20px);
     flex-grow: 1;
   }
 
   .team-member img {
     width: 100px;
-    height: 100px; /* Adjust image size for mobile */
+    height: 100px;
   }
 
   .team-member h3 {
-    font-size: 1rem; /* Adjust font size for mobile */
+    font-size: 1rem;
   }
 
   .team-member p {
-    font-size: 0.875rem; /* Adjust font size for mobile */
+    font-size: 0.875rem;
+  }
+
+  .belief-card {
+    flex-basis: 100%;
   }
 }

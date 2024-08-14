@@ -4,50 +4,47 @@ import Footer from '../homepage_components/Footer';
 import '../gallerypage_components/GalleryPage.css';
 
 const productsData = [
-  { id: 1, name: 'Frog\'s Island Retreat', price: '$29.95', img: '/image/work1.jpg', soldOut: true },
-  { id: 2, name: 'Mystic Thorn', price: '$39.95', img: '/image/work2.jpg', soldOut: true },
-  { id: 3, name: 'Blossom Reverie', price: '$49.99', img: '/image/work3.jpg', soldOut: true },
-  { id: 4, name: 'Magic Forest', price: '$49.99', img: '/image/work4.jpg', soldOut: true },
-  { id: 5, name: 'Mushroom House', price: '$49.99', img: '/image/work5.jpg', soldOut: true },
-  { id: 6, name: 'Tiny Me', price: '$20.00', img: '/image/work6.jpg', soldOut: true },
+  { id: 1, name: 'Frog\'s Island Retreat', img: '/image/Gallery/work1.jpg', categories: ['Succulents'] },
+  { id: 2, name: 'Mystic Thorn', img: '/image/Gallery/work2.jpg', categories: ['Succulents'] },
+  { id: 3, name: 'Blossom Reverie', img: '/image/Gallery/work3.jpg', categories: ['House Plants','Ferns','Moss'] },
+  { id: 4, name: 'Magic Forest', img: '/image/Gallery/work4.jpg', categories: ['Succulents'] },
+  { id: 5, name: 'Mushroom House', img: '/image/Gallery/work5.jpg', categories: ['Succulents'] },
+  { id: 6, name: 'Tiny Me', img: '/image/Gallery/work6.jpg', categories: ['Moss'] },
+  { id: 7, name: '', img: '/image/Gallery/work7.jpg', categories: ['Moss'] },
+  { id: 8, name: '', img: '/image/Gallery/work8.jpg', categories: ['Moss', 'Ferns'] },
+  { id: 9, name: '', img: '/image/Gallery/work9.jpg', categories: ['House Plants','Ferns'] },
+  { id: 10, name: '', img: '/image/Gallery/work10.jpeg', categories: ['Succulents'] },
+  { id: 11, name: '', img: '/image/Gallery/work11.jpeg', categories: ['Air Plants'] },
+  { id: 12, name: '', img: '/image/Gallery/work12.jpg', categories: ['House Plants','Ferns'] },
+  { id: 13, name: '', img: '/image/Gallery/work13.jpg', categories: ['Moss', 'Ferns'] },
+  { id: 14, name: '', img: '/image/Gallery/work14.jpeg', categories: ['Moss'] },
+  { id: 15, name: '', img: '/image/Gallery/work15.jpeg', categories: ['Moss','Ferns'] },
+  { id: 16, name: '', img: '/image/Gallery/work16.jpg', categories: ['Moss', 'Ferns'] },
+  { id: 17, name: '', img: '/image/Gallery/work17.jpg', categories: ['House Plants','Ferns'] },
+  { id: 18, name: '', img: '/image/Gallery/work18.jpg', categories: ['Moss','Ferns'] },
+  { id: 19, name: '', img: '/image/Gallery/work19.jpg', categories: ['House Plants','Ferns'] },
+  { id: 20, name: '', img: '/image/Gallery/work20.jpg', categories: ['House Plants','Ferns'] },
+  { id: 21, name: '', img: '/image/Gallery/work21.jpg', categories: ['House Plants','Ferns'] },
 ];
 
 const GalleryPage = () => {
   const [products] = useState(productsData);
   const [currentPage, setCurrentPage] = useState(1);
   const [productsPerPage] = useState(9);
-  const [sortType, setSortType] = useState('az');
-  const [searchTerm, setSearchTerm] = useState('');
+  const [currentCategory, setCurrentCategory] = useState('ALL');
 
-  // Add useEffect to scroll to the top of the page on component mount
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const handleSortChange = (e) => {
-    setSortType(e.target.value);
+  const handleCategoryChange = (category) => {
+    setCurrentCategory(category);
+    setCurrentPage(1); // Reset to the first page when category changes
   };
 
-  const handleSearchChange = (e) => {
-    setSearchTerm(e.target.value);
-  };
-
-  const sortedProducts = [...products].sort((a, b) => {
-    if (sortType === 'az') {
-      return a.name.localeCompare(b.name);
-    } else if (sortType === 'za') {
-      return b.name.localeCompare(a.name);
-    } else if (sortType === 'price-asc') {
-      return parseFloat(a.price.slice(1)) - parseFloat(b.price.slice(1));
-    } else if (sortType === 'price-desc') {
-      return parseFloat(b.price.slice(1)) - parseFloat(a.price.slice(1));
-    }
-    return 0;
-  });
-
-  const filteredProducts = sortedProducts.filter(product =>
-    product.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const filteredProducts = currentCategory === 'ALL'
+    ? products
+    : products.filter(product => product.categories.includes(currentCategory));
 
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
@@ -67,32 +64,24 @@ const GalleryPage = () => {
     <div>
       <Header />
       <main className="gallery-page">
-        <h1 className='gallery-h1'>Products</h1>
-        <div className="product-filters">
-          <label htmlFor="sort">Sort By:</label>
-          <select id="sort" name="sort" value={sortType} onChange={handleSortChange}>
-            <option value="az">Alphabetically, A-Z</option>
-            <option value="za">Alphabetically, Z-A</option>
-            <option value="price-asc">Price, low to high</option>
-            <option value="price-desc">Price, high to low</option>
-          </select>
-          <label htmlFor="search">Search:</label>
-          <input
-            type="text"
-            id="search"
-            placeholder="Search products..."
-            value={searchTerm}
-            onChange={handleSearchChange}
-          />
+        <h1 className='gallery-h1'>Our Gallery</h1>
+        <p className='gallery-subtitle'>Where Nature Meets Creativity 🌿</p>
+        <div className="category-tabs">
+          {['ALL', 'Moss', 'House Plants', 'Succulents', 'Air Plants', 'Ferns'].map(category => (
+            <button
+              key={category}
+              className={`category-tab ${category === currentCategory ? 'active' : ''}`}
+              onClick={() => handleCategoryChange(category)}
+            >
+              {category}
+            </button>
+          ))}
         </div>
         <div className="product-container">
           <div className="product-grid">
             {currentProducts.map(product => (
               <div key={product.id} className="product-card">
                 <img src={product.img} alt={product.name} />
-                <h2>{product.name}</h2>
-                <p>{product.price}</p>
-                {product.soldOut && <span className="sold-out">Sold Out</span>}
               </div>
             ))}
           </div>

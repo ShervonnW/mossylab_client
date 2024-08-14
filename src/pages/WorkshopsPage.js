@@ -7,7 +7,6 @@ const workshops = [
   {
     id: 1,
     title: 'Pick Your Own Project Workshop',
-    description: 'Create your own miniature world with our guided terrarium workshops. Perfect for beginners!',
     date: 'Any Day',
     time: 'Any time',
     price: '$35 - $45',
@@ -16,7 +15,6 @@ const workshops = [
   {
     id: 2,
     title: 'Succulent & Sangria Workshop',
-    description: 'In this workshop, you will receive two cute desert plants along with a unique terrarium, sand, pebbles, and lots of other decorations to make your terrarium unique and beautiful.',
     date: 'Jun 01, 2024 - Oct 24, 2024',
     time: '2:00 PM - 4:00 PM',
     price: '$50',
@@ -25,13 +23,20 @@ const workshops = [
   {
     id: 3,
     title: 'Air Plants Terrarium Workshop',
-    description: 'This class includes our large globe terrarium, two air plants, and fun terrarium supplies. Perfect for beginners! ',
     date: 'Jun 01, 2024 - Oct 24, 2024',
     time: '5:00 PM - 6:00 PM',
     price: '$45',
     img: '/image/Workshop/Air_Plants_Terrarium.png',
 
   },
+  {
+    id: 4,
+    title: 'Bring Your Own Bottle Workshop',
+    date: 'Every Friday',
+    time: 'Any time',
+    price: '$35',
+    img: '/image/Workshop/Bring_Your_Own_Bottle.png',
+  }
 ];
 
 const WorkshopsPage = () => {

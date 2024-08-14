@@ -24,6 +24,9 @@ jobs:
     - name: Build the project
       run: npm run build
 
+    - name: Ensure CNAME is not overwritten
+      run: echo "mossylab.shop" > ./build/CNAME
+
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:

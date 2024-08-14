@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import Header from '../homepage_components/Header';
 import Footer from '../homepage_components/Footer';

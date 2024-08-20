@@ -30,7 +30,7 @@ const ContactPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('https://floating-crag-73026-d9a5898f632f.herokuapp.com/send-email', {
+      const response = await fetch('${process.env.API_URL}/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

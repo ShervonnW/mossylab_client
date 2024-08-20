@@ -30,7 +30,7 @@ const ContactPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('${process.env.API_URL}/send-email', {
+      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/send-email`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
